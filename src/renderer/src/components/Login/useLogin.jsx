@@ -22,6 +22,8 @@ export const useLogin = () => {
         document.cookie = `USER_ACCESS_TOKEN=${cookie}; path=/`
 
         // navigate('/projectList')
+      } else {
+        setSucess('Login failed')
       }
       // onLogin(response.data.token)
     } catch (error) {
