@@ -1,12 +1,16 @@
 import Login from './components/Login/Login'
-import { HashRouter, Route } from 'react-router-dom'
+import { MemoryRouter, Route, Routes } from 'react-router-dom'
+import Prolist from './components/Prolist/Prolist'
 function App() {
   // const ipcHandle = () => window.electron.ipcRenderer.send('ping')
 
   return (
-    <>
-      <Login />
-    </>
+    <MemoryRouter>
+      <Routes>
+        <Route exact path="/" element={<Login />} />
+        <Route path="/prolist" element={<Prolist />} />
+      </Routes>
+    </MemoryRouter>
   )
 }
 

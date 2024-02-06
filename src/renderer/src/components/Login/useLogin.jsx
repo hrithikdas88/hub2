@@ -1,12 +1,12 @@
 import axios from 'axios'
 import { useState } from 'react'
-// import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export const useLogin = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [succes, setSucess] = useState('')
-  // const navigate = useNavigate()
+  const navigate = useNavigate()
   const handleLogin = async () => {
     try {
       const response = await axios.post('http://localhost:3000/login', {
@@ -21,7 +21,7 @@ export const useLogin = () => {
 
         document.cookie = `USER_ACCESS_TOKEN=${cookie}; path=/`
 
-        // navigate('/projectList')
+        navigate('/prolist')
       } else {
         setSucess('Login failed')
       }

@@ -1,0 +1,17 @@
+.project-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project-item {
+    margin-bottom: 10px;
+  }
+  
+  .timer {
+    margin-top: 5px;
+  }
+  
+  .total-timer {
+    margin-top: 20px;
+  }
+  
